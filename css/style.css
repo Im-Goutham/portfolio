@@ -1,0 +1,301 @@
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #555 !important;
+  font-size: 14px !important;
+  font-family: 'Inconsolata', monospace !important;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:hover,
+a:visited,
+a:active,
+a:link {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 3em;
+    text-align: center;
+    width: auto;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    width: auto;
+    display: inline;
+    color: #FF5A07 !important;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 1.em;2
+    text-align: left;
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    width: auto;
+    padding: 0.2em;
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.title {
+}
+
+.blinking-cursor {
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #FF5A07;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #FF5A07;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #FF5A07;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #FF5A07;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #FF5A07;
+  }
+}
+
+#navigation {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#navigation ul {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#navigation ul li {
+    display: inline-block;
+    padding: .4em;
+}
+
+#navigation ul li:hover {
+    color: #FF5A07;
+}
+
+.content {
+    font-size: 1.2em;
+    padding: 2em;
+    line-height: 1.8em;
+}
+
+#about {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about a:link,
+#about a:hover,
+#abouta:active,
+#about a:visited {
+    background-color: #555;
+    color: white !important;
+    padding: .2em;
+}
+
+#contact {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact a:link,
+#contact a:hover,
+#contact a:visited {
+    background-color: #555;
+    color: white !important;
+    padding: .2em;
+}
+
+#home {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home a:link,
+#home a:hover,
+#home a:active,
+#home a:visited {
+    background-color: red;
+    color: white;
+    padding: .2em;
+}
+
+#home a:hover {
+    opacity: 0.6;
+}
+
+#writing {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#writing a:link,
+#writing a:hover,
+#writing a:active,
+#writing a:visited {
+    color: #333;
+    padding: .2em;
+    text-decoration: underline;
+    text-decoration-color: #FF5A07;
+    -webkit-text-decoration-color: #FF5A07;
+    -moz-text-decoration-color: #FF5A07;
+}
+
+#writing a:hover {
+    color: #FF5A07;
+}
+
+/* Link Styles */
+#blog {
+    background-color: #F6F2F1 !important;
+    color: #dc7604 !important;
+}
+
+#stakview {
+    background-color: #eeeeee !important;
+    color: #FF5A07 !important;
+}
+
+#facebook {
+    background-color: #1DA1F2 !important;
+    color: #fff !important;
+}
+
+#instagram {
+    background-color: #ff1868 !important;
+    color: #fff !important;
+}
+
+#pretty {
+    background-color: #003c78 !important;
+    color: #fddb00 !important;
+
+}
+#px {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+#github {
+    background-color: #000 !important;
+    color: #3acaff !important;
+}
+
+#youtube {
+    background-color: red !important;
+    color: #fff !important;
+}
+
+#qwiki {
+    background-color: #FFA915 !important;
+    color: #fff !important;
+}
+
+#tapgap {
+    background-color: #FFA915 !important;
+    color: #000000 !important;
+}
+
+#ph {
+    background-color: #fa5619 !important;
+    color: #fff !important;
+}
+
+
+.red {
+    color: red;
+}
+
+#work {
+    text-align: center;
+}
+
+.workitem {
+    overflow: none;
+    max-width: 400px;
+    display:inline-block;
+    padding: 20px;
+    vertical-align: top;
+
+}
+
+.workitem meta {
+
+}
+
+#workitemimg {
+    height: auto;
+    width: auto;
+
+    max-height: 200px;
+    max-width: 600px;
+    max-width: 100%;
+    border-radius: 3px;
+}
