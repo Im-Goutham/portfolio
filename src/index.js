@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  hashHistory
 } from 'react-router-dom'
 
 import App from './App';
@@ -17,7 +18,7 @@ import Chat from './Chat'
 
 
 ReactDOM.render(
-  <Router>
+  <Router history={hashHistory}>
       <div>
         <Route exact path="/" component={App}/>
         <Route path="/about" component={About}/>
