@@ -23,7 +23,9 @@ class Header extends Component {
         <li><NavLink to="/about">👦 About</NavLink></li>
         <li><NavLink to="/work">💻 Work</NavLink></li>
         <li><NavLink to="/skills">🎮 Skills</NavLink></li>
-        <li><NavLink to="/skills">📓 Resume</NavLink></li>
+        {/*
+          <li><NavLink to="/skills">📓 Resume</NavLink></li>
+        */}
         <li><NavLink to="/chat">💬 Chat</NavLink></li>
         <li><NavLink to="/contact">☎️ Contact</NavLink></li>
       </ul>
