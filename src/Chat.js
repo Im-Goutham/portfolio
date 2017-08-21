@@ -20,7 +20,33 @@ class Chat extends Component {
           mainChatPadhu: true,
           padhuChat: false,
           positiveResponse: true,
-          lastResponse: false
+          lastResponse: false,
+          arrayCount: 0,
+          work:[
+                  [
+                    "Cool! So first, I want to talk about STAKVIEW.",
+                    "I started learning react js while working on this website.",
+                    "Initially I worked only on front-end.",
+                    "Gradually Im into backend also, used nodejs ,mongoDB,GraphQL and much more technologies while writing services for this website.",
+                    "You can view the site here. Want to learn about The 'New Life Agency' App ?"
+                  ],
+                  [
+                    "Great another app I worked on is New Life Agency.",
+                    "For this app I wrote backend services.",
+                    "I created a website to manage the data in the app for Admin.",
+                    "You can view the app here. Want to learn about The 'Waleteros' App ?"
+                  ],
+                  [
+                     "Great another app I have started working recently is Walateros.",
+                     "Its very interesting and challenging app to work.",
+                     "As it is a banking management app.",
+                     "I have been working on backend for this app.",
+                     "You can view this project here - and those are my projects!"
+                  ]
+          ],
+          about:[
+
+          ]
     }
   }
 
@@ -114,7 +140,15 @@ messageSent(){
 
 
 
-myProjects(message){
+myProjects(message,count){
+  var arrayCount = 0;
+   if(count == 0){
+       this.setState({arrayCount: 0});
+   }
+   else {
+       this.setState({arrayCount: this.state.arrayCount+1});
+       arrayCount = this.state.arrayCount+1;
+   }
    var self = this;
    this.setState({buttonType:"work",showMainButtons:false,showSubMainButtons: true});
    var messages = this.state.messages;
@@ -128,6 +162,32 @@ myProjects(message){
        self.setState({messages:messages},()=>{
            var elem = document.getElementById('messages');
            elem.scrollTop = elem.scrollHeight;
+           var len = self.state.work[arrayCount].length;
+            $("#activeTyping").show();
+            pushWork();
+            var subCount = 0;
+            function pushWork(){
+              setTimeout(function() {
+                  var newMessage = {};
+                  newMessage.type = "left";
+                    console.log("arrayCount is "+arrayCount+" subCount is "+subCount);
+                  console.log("work is "+JSON.stringify(self.state.work[arrayCount]));
+                  newMessage.text = self.state.work[arrayCount][subCount];
+                  messages.push(newMessage);
+                  self.setState({messages: messages},()=>{
+                  var elem = document.getElementById('messages');
+                  elem.scrollTop = elem.scrollHeight;
+                  subCount++;
+                  if(self.state.work[arrayCount][subCount]){
+                       pushWork();
+                  }
+                  else {
+                        $("#activeTyping").hide();
+                  }
+                  });
+               }, 3000);
+            }
+
        })
      },500)
 }
@@ -170,7 +230,7 @@ getContact(message){
 
 goToMain(message){
     var self = this;
-    this.setState({buttonType:"",showMainButtons:true,showSubMainButtons: true})
+    this.setState({buttonType:"",showMainButtons:true,showSubMainButtons: true,arrayCount:0})
     var messages = this.state.messages;
     var newMessage = {};
     setTimeout(function() {
@@ -346,9 +406,9 @@ lastResponse(message){
                                   </div>
                               ):(
                                 <div>
-                                  <Button inverted color='red' onClick={this.myProjects.bind(this,"Absolutely")}>Absolutely</Button>
-                                  <Button inverted color='orange' onClick={this.aboutMe.bind(this,"I want to know more about you.")}>I want to know more about you.</Button>
-                                  <Button inverted color='yellow' onClick={this.getContact.bind(this,"I want to get together.")}>I want to get together.</Button>
+                                  <Button inverted color='red' onClick={this.myProjects.bind(this,"Absolutely",0)}>Absolutely</Button>
+                                  <Button inverted color='orange' onClick={this.aboutMe.bind(this,"I want to know more about you.",0)}>I want to know more about you.</Button>
+                                  <Button inverted color='yellow' onClick={this.getContact.bind(this,"I want to get together.",0)}>I want to get together.</Button>
                                 </div>
                               )
                     ):(
